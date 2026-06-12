@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 620" role="img" aria-labelledby="title desc">
+  <title id="title">Fruit Heights City Celebrates America 250 banner</title>
+  <desc id="desc">A civic festival banner with Wasatch mountains, cherries, peaches, stars, ribbons, and the city slogan.</desc>
+  <rect width="1800" height="620" fill="#fff8e9"/>
+  <path d="M0 230 168 88l118 96 90-112 124 142 104-88 126 126 152-154 148 164 86-88 118 100 566 212v134H0Z" fill="#cfe6f7"/>
+  <path d="M0 296 168 142l118 96 90-112 124 142 104-88 126 126 152-154 148 164 86-88 118 100 566 212v80H0Z" fill="#173f7a"/>
+  <path d="M0 408c238-82 438-74 602 24 138 82 296 78 474 8 230-90 468-56 724 92v88H0Z" fill="#2f7d4f"/>
+  <g opacity=".95">
+    <path d="M0 88c208 98 418 96 630-4 224-106 446-108 666-6 166 76 334 92 504 48v84c-192 50-382 32-570-54-188-86-376-84-564 4-224 106-446 108-666 6Z" fill="#173f7a"/>
+    <path d="M0 178c208 98 418 96 630-4 224-106 446-108 666-6 166 76 334 92 504 48v46c-192 50-382 32-570-54-188-86-376-84-564 4-224 106-446 108-666 6Z" fill="#b82032"/>
+    <path d="M0 132c208 98 418 96 630-4 224-106 446-108 666-6 166 76 334 92 504 48v46c-192 50-382 32-570-54-188-86-376-84-564 4-224 106-446 108-666 6Z" fill="#fffdf8"/>
+  </g>
+  <g fill="#f2b632" opacity=".85">
+    <path d="m142 48 14 30 32 4-24 22 6 32-28-16-28 16 6-32-24-22 32-4z"/>
+    <path d="m1452 76 14 30 32 4-24 22 6 32-28-16-28 16 6-32-24-22 32-4z"/>
+    <path d="m1644 210 10 22 24 4-18 16 4 24-20-12-22 12 6-24-18-16 24-4z"/>
+  </g>
+  <g transform="translate(98 418)">
+    <circle cx="36" cy="72" r="34" fill="#b82032"/><circle cx="86" cy="88" r="34" fill="#7d1324"/>
+    <path d="M58 48c12-42 48-66 88-72" fill="none" stroke="#2f7d4f" stroke-width="9" stroke-linecap="round"/>
+    <path d="M126 10c36-12 72 2 92 26-42 10-72 2-92-26Z" fill="#2f7d4f"/>
+  </g>
+  <g transform="translate(1510 410)">
+    <circle cx="84" cy="78" r="58" fill="#f5a65b"/><path d="M84 20c24 42 22 84-2 116" fill="none" stroke="#d77a31" stroke-width="7"/>
+    <path d="M76 24c-2-38 20-68 56-86 8 42-10 72-56 86Z" fill="#2f7d4f"/>
+    <circle cx="12" cy="126" r="30" fill="#b82032"/><circle cx="58" cy="138" r="30" fill="#7d1324"/>
+  </g>
+  <g font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">
+    <text x="900" y="258" fill="#fffdf8" font-size="92" font-weight="800">Fruit Heights City Celebrates America 250!</text>
+    <text x="900" y="324" fill="#fff8e9" font-size="34" font-weight="700">Presented by the Fruit Heights 7th Ward Priests</text>
+    <text x="900" y="386" fill="#f2b632" font-size="42" font-style="italic" font-weight="700">City of Good Neighbors</text>
+  </g>
+</svg>
