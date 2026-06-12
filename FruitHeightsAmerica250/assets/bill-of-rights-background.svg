@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">Bill of Rights background</title>
+  <desc id="desc">Ten civic medallions, parchment, columns, stars, and American flag ribbons for the Bill of Rights section.</desc>
+  <rect width="1400" height="760" fill="#162033"/>
+  <path d="M0 92c168 80 334 80 500 0 180-88 358-90 534-4 120 58 242 70 366 34v82c-148 40-292 24-434-46-144-70-288-68-432 4-178 88-356 90-534 4z" fill="#173f7a"/>
+  <path d="M0 174c168 80 334 80 500 0 180-88 358-90 534-4 120 58 242 70 366 34v42c-148 40-292 24-434-46-144-70-288-68-432 4-178 88-356 90-534 4z" fill="#b82032"/>
+  <path d="M0 132c168 80 334 80 500 0 180-88 358-90 534-4 120 58 242 70 366 34v42c-148 40-292 24-434-46-144-70-288-68-432 4-178 88-356 90-534 4z" fill="#fff8e9"/>
+  <rect x="430" y="160" width="540" height="460" rx="18" fill="#fff8e9" opacity=".9"/>
+  <path d="M520 248h360M520 308h320M520 368h360M520 428h300M520 488h336" stroke="#9a6b3c" stroke-width="12" stroke-linecap="round" opacity=".18"/>
+  <g fill="#f2b632">
+    <path d="m104 366 12 24 28 4-20 18 4 28-24-14-24 14 4-28-20-18 28-4z"/>
+    <path d="m1260 342 12 24 28 4-20 18 4 28-24-14-24 14 4-28-20-18 28-4z"/>
+  </g>
+  <g transform="translate(126 474)" fill="#fff8e9" stroke="#f2b632" stroke-width="8">
+    <circle cx="0" cy="0" r="48"/><circle cx="118" cy="-70" r="48"/><circle cx="250" cy="-24" r="48"/><circle cx="1040" cy="-10" r="48"/><circle cx="1148" cy="-88" r="48"/>
+  </g>
+  <g fill="#173f7a" opacity=".85">
+    <rect x="210" y="556" width="980" height="34"/><rect x="246" y="590" width="44" height="122"/><rect x="424" y="590" width="44" height="122"/><rect x="604" y="590" width="44" height="122"/><rect x="784" y="590" width="44" height="122"/><rect x="964" y="590" width="44" height="122"/><rect x="1110" y="590" width="44" height="122"/>
+  </g>
+</svg>
