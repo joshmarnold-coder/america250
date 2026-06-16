@@ -1,0 +1,914 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Founding Documents Sheets</title>
+  <style>
+    :root {
+      --ink: #162033;
+      --muted: #5a6575;
+      --cream: #fff8e9;
+      --paper: #f5e4bd;
+      --red: #b82032;
+      --red-deep: #7d1324;
+      --blue: #173f7a;
+      --gold: #f2b632;
+      --green: #2f7d4f;
+      --line: rgba(22, 32, 51, .18);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      background: #d8d8d8;
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: .35in 0;
+      background:
+        radial-gradient(circle at 10% 8%, rgba(242, 182, 50, .18), transparent 2in),
+        radial-gradient(circle at 93% 4%, rgba(184, 32, 50, .16), transparent 1.6in),
+        #d8d8d8;
+    }
+
+    .print-note {
+      width: 8.5in;
+      margin: 0 auto .25in;
+      padding: .12in .18in;
+      border: 1px solid rgba(22, 32, 51, .18);
+      background: white;
+      color: #333;
+      font-size: 10pt;
+    }
+
+    .sheet {
+      position: relative;
+      width: 8.5in;
+      height: 11in;
+      margin: 0 auto .35in;
+      overflow: hidden;
+      break-after: page;
+      page-break-after: always;
+      background:
+        linear-gradient(180deg, rgba(255, 248, 233, .95), rgba(255, 255, 255, .92)),
+        url("assets/generated/flag-motifs-generated.jpg") center bottom / cover no-repeat;
+      box-shadow: 0 .18in .55in rgba(22, 32, 51, .22);
+    }
+
+    .sheet::before {
+      content: "";
+      position: absolute;
+      inset: .18in;
+      border: 2px solid rgba(23, 63, 122, .26);
+      pointer-events: none;
+    }
+
+    .sheet::after {
+      content: "";
+      position: absolute;
+      inset: .28in;
+      border: 1px solid rgba(184, 32, 50, .22);
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr) auto;
+      height: 100%;
+      padding: .34in .42in .26in;
+      gap: .12in;
+    }
+
+    .mast {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: .18in;
+      align-items: start;
+      padding-bottom: .09in;
+      border-bottom: 3px double rgba(23, 63, 122, .35);
+    }
+
+    .eyebrow {
+      margin: 0 0 .04in;
+      color: var(--red-deep);
+      font-size: 8.5pt;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p { margin: 0; }
+
+    h1 {
+      color: var(--blue);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 33pt;
+      line-height: .95;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      color: var(--blue);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 19pt;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      color: var(--red-deep);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 12.5pt;
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 5.9in;
+      margin-top: .05in;
+      color: var(--muted);
+      font-size: 11pt;
+      font-weight: 650;
+      line-height: 1.17;
+    }
+
+    .mast-qr {
+      display: grid;
+      justify-items: center;
+      gap: .04in;
+      width: .95in;
+      color: var(--blue);
+      font-size: 7.2pt;
+      font-weight: 850;
+      line-height: 1.05;
+      text-align: center;
+    }
+
+    .mast-qr img {
+      width: .76in;
+      height: .76in;
+      border: 1px solid rgba(22, 32, 51, .2);
+      background: white;
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: .1in;
+      align-items: start;
+    }
+
+    .hero-art {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(22, 32, 51, .22);
+      background: #fff;
+    }
+
+    .hero-art img {
+      display: block;
+      width: 100%;
+      height: 3.55in;
+      object-fit: cover;
+    }
+
+    .hero-art.document img {
+      height: 4.1in;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .caption {
+      padding: .08in .1in;
+      background: rgba(22, 32, 51, .92);
+      color: #fff;
+      font-size: 8.5pt;
+      font-weight: 750;
+      line-height: 1.18;
+    }
+
+    .panel {
+      padding: .11in;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .78);
+    }
+
+    .panel.gold {
+      border-left: .08in solid var(--gold);
+      background: rgba(255, 248, 233, .88);
+    }
+
+    .panel.blue {
+      border-left: .08in solid var(--blue);
+    }
+
+    .panel.red {
+      border-left: .08in solid var(--red);
+    }
+
+    .panel.green {
+      border-left: .08in solid var(--green);
+    }
+
+    .panel p,
+    .body-copy p,
+    li {
+      color: #253044;
+      font-size: 10.1pt;
+      line-height: 1.22;
+    }
+
+    .panel p + p { margin-top: .05in; }
+
+    .tag {
+      display: inline-block;
+      margin-top: .06in;
+      padding: .05in .08in;
+      background: var(--blue);
+      color: #fff;
+      font-size: 8pt;
+      font-weight: 900;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .stack {
+      display: grid;
+      gap: .09in;
+    }
+
+    .three-up {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .09in;
+    }
+
+    .charter-mini {
+      display: grid;
+      grid-template-rows: 1.52in auto;
+      overflow: hidden;
+      border: 1px solid rgba(22, 32, 51, .18);
+      background: white;
+    }
+
+    .charter-mini img {
+      width: 100%;
+      height: 1.52in;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .charter-mini div { padding: .08in; }
+
+    .charter-mini h3 { font-size: 10.6pt; }
+
+    .charter-mini p {
+      margin-top: .04in;
+      color: #2b3445;
+      font-size: 8pt;
+      line-height: 1.2;
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .08in;
+    }
+
+    .declaration-band {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: .08in;
+    }
+
+    .declaration-mark {
+      min-height: .72in;
+      padding: .08in;
+      border: 1px solid rgba(22, 32, 51, .14);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, .88), rgba(255, 248, 233, .8)),
+        url("assets/generated/flag-motifs-generated.jpg") center / cover no-repeat;
+    }
+
+    .declaration-mark strong {
+      display: block;
+      color: var(--red-deep);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 11pt;
+      line-height: 1;
+    }
+
+    .declaration-mark span {
+      display: block;
+      margin-top: .04in;
+      color: #253044;
+      font-size: 8pt;
+      font-weight: 750;
+      line-height: 1.12;
+    }
+
+    .theme-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .08in;
+    }
+
+    .theme-card {
+      display: grid;
+      grid-template-columns: .58in 1fr;
+      gap: .07in;
+      align-items: center;
+      min-height: .72in;
+      padding: .07in;
+      border: 1px solid rgba(22, 32, 51, .14);
+      background: rgba(255, 255, 255, .82);
+    }
+
+    .theme-card img {
+      width: .58in;
+      height: .58in;
+      object-fit: cover;
+      border: 2px solid rgba(184, 32, 50, .24);
+    }
+
+    .theme-card strong {
+      display: block;
+      color: var(--blue);
+      font-size: 9.2pt;
+      line-height: 1.08;
+    }
+
+    .theme-card p {
+      margin-top: .03in;
+      color: #2b3445;
+      font-size: 8pt;
+      line-height: 1.14;
+    }
+
+    .benefit {
+      min-height: .72in;
+      padding: .08in;
+      border: 1px solid rgba(22, 32, 51, .14);
+      background: rgba(255, 255, 255, .78);
+    }
+
+    .benefit strong,
+    .right strong,
+    .figure strong,
+    .amendment strong {
+      display: block;
+      color: var(--blue);
+      font-size: 9.2pt;
+      font-weight: 900;
+      line-height: 1.1;
+    }
+
+    .benefit p,
+    .figure p,
+    .amendment p,
+    .right p {
+      margin-top: .035in;
+      color: #2b3445;
+      font-size: 8.2pt;
+      line-height: 1.14;
+    }
+
+    .figure-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .08in;
+    }
+
+    .figure {
+      display: grid;
+      grid-template-columns: .56in 1fr;
+      gap: .07in;
+      align-items: center;
+      padding: .07in;
+      border: 1px solid rgba(22, 32, 51, .14);
+      background: rgba(255, 255, 255, .8);
+    }
+
+    .figure img {
+      width: .56in;
+      height: .56in;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid rgba(242, 182, 50, .8);
+    }
+
+    .preamble-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: .07in;
+    }
+
+    .phrase {
+      padding: .07in .08in;
+      border: 1px solid rgba(22, 32, 51, .14);
+      background: rgba(255, 255, 255, .82);
+    }
+
+    .phrase strong {
+      display: block;
+      color: var(--red-deep);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 9.7pt;
+      line-height: 1.05;
+    }
+
+    .phrase p {
+      margin-top: .035in;
+      color: #293247;
+      font-size: 7.8pt;
+      line-height: 1.13;
+    }
+
+    .amendment-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .07in;
+    }
+
+    .amendment {
+      padding: .07in;
+      border: 1px solid rgba(22, 32, 51, .14);
+      background: rgba(255, 255, 255, .82);
+    }
+
+    .rights-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: .07in;
+    }
+
+    .right {
+      display: grid;
+      grid-template-columns: .58in 1fr;
+      gap: .07in;
+      align-items: center;
+      min-height: .64in;
+      padding: .06in;
+      border: 1px solid rgba(22, 32, 51, .14);
+      background: rgba(255, 255, 255, .82);
+    }
+
+    .right img {
+      width: .58in;
+      height: .58in;
+      object-fit: cover;
+      border: 2px solid rgba(23, 63, 122, .28);
+    }
+
+    .quiz-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: .07in;
+    }
+
+    .quiz-item {
+      padding: .07in .08in;
+      border: 1px solid rgba(22, 32, 51, .16);
+      background: rgba(255, 255, 255, .84);
+    }
+
+    .quiz-item strong {
+      display: block;
+      color: var(--blue);
+      font-size: 8.7pt;
+      line-height: 1.12;
+    }
+
+    .quiz-item p {
+      margin-top: .025in;
+      color: var(--red-deep);
+      font-size: 8.3pt;
+      font-weight: 850;
+      line-height: 1.18;
+    }
+
+    .quiz-options-print {
+      margin-top: .025in;
+      color: #384154;
+      font-size: 7.4pt;
+      line-height: 1.14;
+    }
+
+    .footer {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: .2in;
+      padding-top: .07in;
+      border-top: 1px solid rgba(22, 32, 51, .18);
+      color: var(--muted);
+      font-size: 7.2pt;
+      line-height: 1.18;
+    }
+
+    ul {
+      margin: .08in 0 0;
+      padding-left: .18in;
+    }
+
+    li + li { margin-top: .04in; }
+
+    .wide-art {
+      position: relative;
+      height: 1.06in;
+      overflow: hidden;
+      border: 1px solid rgba(22, 32, 51, .16);
+    }
+
+    .wide-art img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: .1in;
+      margin-bottom: .05in;
+    }
+
+    .section-title::before {
+      content: "";
+      width: .22in;
+      height: .08in;
+      background: var(--gold);
+    }
+
+    @page {
+      size: Letter;
+      margin: 0;
+    }
+
+    @media print {
+      html, body { background: white; }
+      body { padding: 0; }
+      .print-note { display: none; }
+      .sheet {
+        width: 8.5in;
+        height: 11in;
+        margin: 0;
+        box-shadow: none;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="print-note">Print on letter-size photo paper at 100% scale. Turn on background graphics for the full parchment and banner treatment.</div>
+
+  <section class="sheet">
+    <div class="content">
+      <header class="mast">
+        <div>
+          <p class="eyebrow">America 250</p>
+          <h1>The Charters Of Freedom</h1>
+          <p class="dek">Three founding documents shaped the civic story: rights, liberty, self-government, limits on power, and the work of each generation to keep those promises alive.</p>
+        </div>
+        <span class="mast-qr"><img src="FruitHeightsAmerica250-QR.png" alt="QR code">Full site and quiz</span>
+      </header>
+
+      <main class="stack">
+        <div class="three-up">
+          <article class="charter-mini">
+            <img src="assets/generated/charters/declaration-thumb.jpg" alt="Declaration of Independence thumbnail">
+            <div>
+              <h3>Declaration of Independence</h3>
+              <p>Announced independence from Great Britain and named ideals of rights, equality, liberty, and government by consent.</p>
+            </div>
+          </article>
+          <article class="charter-mini">
+            <img src="assets/generated/charters/constitution-thumb.jpg" alt="Constitution thumbnail">
+            <div>
+              <h3>Constitution</h3>
+              <p>Created a durable framework for national government, including separation of powers, federalism, and rule of law.</p>
+            </div>
+          </article>
+          <article class="charter-mini">
+            <img src="assets/generated/charters/bill-of-rights-thumb.jpg" alt="Bill of Rights thumbnail">
+            <div>
+              <h3>Bill of Rights</h3>
+              <p>Added the first ten amendments, protecting core liberties and limiting government power.</p>
+            </div>
+          </article>
+        </div>
+
+        <section class="panel gold">
+          <div class="section-title"><h2>Why They Matter Today</h2></div>
+          <div class="benefit-grid">
+            <div class="benefit"><strong>Free expression</strong><p>People can speak, publish, worship, gather, and petition peacefully.</p></div>
+            <div class="benefit"><strong>Fair trials</strong><p>Government must follow rules before taking liberty or property.</p></div>
+            <div class="benefit"><strong>Limited government</strong><p>Power is divided, checked, and bound by a written Constitution.</p></div>
+            <div class="benefit"><strong>Voting rights</strong><p>Amendments expanded who could participate in self-government.</p></div>
+            <div class="benefit"><strong>Equal protection</strong><p>The Constitution's promises became tools for fuller liberty.</p></div>
+            <div class="benefit"><strong>Civic participation</strong><p>Citizens help keep constitutional government alive in every generation.</p></div>
+          </div>
+        </section>
+
+        <div class="wide-art">
+          <img src="assets/generated/why-matter-background.jpg" alt="Generated civic illustration">
+        </div>
+
+        <section class="panel blue">
+          <h3>Did You Know?</h3>
+          <p>The National Archives calls the Declaration, Constitution, and Bill of Rights the "Charters of Freedom."</p>
+          <span class="tag">Benefit today: civic memory</span>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Sources: National Archives founding document pages, National Constitution Center, Library of Congress, National Park Service, USAGov, America250, and Fruit Heights City sources cited on the website.</span>
+      </footer>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="content">
+      <header class="mast">
+        <div>
+          <p class="eyebrow">1776</p>
+          <h1>Declaration Of Independence</h1>
+          <p class="dek">A public statement that the colonies were no longer under British rule, built around ideals that still shape American civic language.</p>
+        </div>
+        <span class="mast-qr"><img src="FruitHeightsAmerica250-QR.png" alt="QR code">Full site and quiz</span>
+      </header>
+
+      <main class="main-grid">
+        <aside class="stack">
+          <section class="panel red">
+            <h3>Document Summary</h3>
+            <p>Announced independence from Great Britain and named ideals of rights, equality, liberty, and government by consent.</p>
+            <span class="tag">Benefit today: language for liberty</span>
+          </section>
+        </aside>
+
+        <section class="stack">
+          <section class="panel gold">
+            <div class="section-title"><h2>Core Ideas</h2></div>
+            <ul>
+              <li>Rights belong to the people and are not simply gifts from government.</li>
+              <li>Equality and liberty became words later generations used to challenge injustice.</li>
+              <li>Government gains legitimacy through the consent of the governed.</li>
+              <li>Citizens can appeal to founding ideals when the nation falls short of them.</li>
+            </ul>
+          </section>
+
+          <section class="declaration-band">
+            <div class="declaration-mark"><strong>1776</strong><span>Independence announced to the world.</span></div>
+            <div class="declaration-mark"><strong>Rights</strong><span>Liberty named as a founding ideal.</span></div>
+            <div class="declaration-mark"><strong>Equality</strong><span>A promise later generations kept pressing forward.</span></div>
+            <div class="declaration-mark"><strong>Consent</strong><span>Government should answer to the governed.</span></div>
+          </section>
+
+          <section class="panel red">
+            <div class="section-title"><h2>Founding Ideals In Action</h2></div>
+            <div class="theme-grid">
+              <article class="theme-card"><img src="assets/generated/benefits/free-expression.jpg" alt="Free expression illustration"><div><strong>Liberty</strong><p>Americans use speech, worship, press, assembly, and petition to participate in civic life.</p></div></article>
+              <article class="theme-card"><img src="assets/generated/benefits/equal-protection.jpg" alt="Equal protection illustration"><div><strong>Equality</strong><p>The Declaration's language helped later Americans argue for fuller liberty and equal protection.</p></div></article>
+              <article class="theme-card"><img src="assets/generated/benefits/civic-participation.jpg" alt="Civic participation illustration"><div><strong>Self-Government</strong><p>Citizens keep the founding promise alive through voting, service, meetings, and respectful debate.</p></div></article>
+            </div>
+          </section>
+
+          <section class="panel blue">
+            <div class="section-title"><h2>Connected Voices</h2></div>
+            <div class="figure-grid">
+              <article class="figure"><img src="assets/generated/heroes/thomas-jefferson.jpg" alt="Thomas Jefferson"><div><strong>Thomas Jefferson</strong><p>Principal author of the Declaration.</p></div></article>
+              <article class="figure"><img src="assets/generated/heroes/frederick-douglass.jpg" alt="Frederick Douglass"><div><strong>Frederick Douglass</strong><p>Used founding ideals to confront injustice.</p></div></article>
+              <article class="figure"><img src="assets/generated/heroes/abraham-lincoln.jpg" alt="Abraham Lincoln"><div><strong>Abraham Lincoln</strong><p>Connected Declaration ideals to preserving the Union and ending slavery.</p></div></article>
+              <article class="figure"><img src="assets/generated/heroes/elizabeth-cady-stanton.jpg" alt="Elizabeth Cady Stanton"><div><strong>Elizabeth Cady Stanton</strong><p>Connected founding language to women's rights.</p></div></article>
+              <article class="figure"><img src="assets/generated/heroes/martin-luther-king-jr.jpg" alt="Martin Luther King Jr."><div><strong>Martin Luther King Jr.</strong><p>Appealed to the Declaration and Constitution as promises America should fulfill.</p></div></article>
+              <article class="figure"><img src="assets/generated/benefits/free-expression.jpg" alt="Free expression illustration"><div><strong>Free Expression</strong><p>Americans can speak, publish, worship, gather, and petition peacefully.</p></div></article>
+            </div>
+          </section>
+
+          <section class="panel green">
+            <h3>A Living Civic Reference</h3>
+            <p>The Declaration's language still shapes how Americans talk about rights and self-government. Its ideals inspired later movements to expand civic participation and equal rights.</p>
+          </section>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Companion for the Fruit Heights America 250 founding documents website.</span>
+      </footer>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="content">
+      <header class="mast">
+        <div>
+          <p class="eyebrow">1787</p>
+          <h1>The Constitution</h1>
+          <p class="dek">A written rulebook for national government, designed around law, separated powers, federalism, amendment, and authority rooted in the people.</p>
+        </div>
+        <span class="mast-qr"><img src="FruitHeightsAmerica250-QR.png" alt="QR code">Full site and quiz</span>
+      </header>
+
+      <main class="main-grid">
+        <aside class="stack">
+          <section class="panel blue">
+            <h3>Document Summary</h3>
+            <p>Created a durable framework for national government, including separation of powers, federalism, and rule of law.</p>
+            <span class="tag">Benefit today: a written rulebook</span>
+          </section>
+        </aside>
+
+        <section class="stack">
+          <section class="panel gold">
+            <div class="section-title"><h2>Explore The Preamble</h2></div>
+            <div class="preamble-grid">
+              <div class="phrase"><strong>We the People</strong><p>The Constitution begins with the people, not a king. Today: citizens shape public life through voting, service, meetings, and respectful debate.</p></div>
+              <div class="phrase"><strong>Form a more perfect Union</strong><p>The states could work together better. Today: Americans cooperate across states on safety, roads, defense, trade, and emergencies.</p></div>
+              <div class="phrase"><strong>Establish Justice</strong><p>A government of laws should treat people fairly. Today: courts and due process help people get a fair hearing.</p></div>
+              <div class="phrase"><strong>Insure domestic Tranquility</strong><p>The Constitution aims to help keep peace at home. Today: communities solve conflicts through laws, rights, and public service.</p></div>
+              <div class="phrase"><strong>Provide for the common defence</strong><p>The nation can act together to protect the country. Today: national defense is a shared responsibility.</p></div>
+              <div class="phrase"><strong>Promote the general Welfare</strong><p>Government can support conditions that help communities thrive. Today: public services, safety, health, and infrastructure support everyday life.</p></div>
+              <div class="phrase"><strong>Secure the Blessings of Liberty</strong><p>Freedom is something to protect now and pass forward. Today: each generation learns, uses, and safeguards constitutional rights.</p></div>
+            </div>
+          </section>
+
+          <section class="panel red">
+            <div class="section-title"><h2>Amendments Help It Grow</h2></div>
+            <p>Article V gives the United States a peaceful process for amendment. Later generations used that process to abolish slavery, define citizenship, protect equal protection, and expand voting rights.</p>
+            <div class="amendment-grid" style="margin-top:.08in">
+              <div class="amendment"><strong>13th Amendment</strong><p>Abolished slavery.</p></div>
+              <div class="amendment"><strong>14th Amendment</strong><p>Citizenship, due process, and equal protection.</p></div>
+              <div class="amendment"><strong>15th Amendment</strong><p>Voting rights regardless of race, color, or previous servitude.</p></div>
+              <div class="amendment"><strong>19th Amendment</strong><p>Women's right to vote.</p></div>
+              <div class="amendment"><strong>24th Amendment</strong><p>No poll taxes in federal elections.</p></div>
+              <div class="amendment"><strong>26th Amendment</strong><p>Voting age lowered to 18.</p></div>
+            </div>
+          </section>
+
+          <section class="panel green">
+            <div class="figure-grid">
+              <article class="figure"><img src="assets/generated/heroes/james-madison.jpg" alt="James Madison"><div><strong>James Madison</strong><p>Constitution architect and key Bill of Rights figure.</p></div></article>
+              <article class="figure"><img src="assets/generated/heroes/george-washington.jpg" alt="George Washington"><div><strong>George Washington</strong><p>Presided over the Constitutional Convention.</p></div></article>
+              <article class="figure"><img src="assets/generated/heroes/gouverneur-morris.jpg" alt="Gouverneur Morris"><div><strong>Gouverneur Morris</strong><p>Credited with much of the final wording, including the Preamble.</p></div></article>
+            </div>
+          </section>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Companion for the Fruit Heights America 250 founding documents website.</span>
+      </footer>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="content">
+      <header class="mast">
+        <div>
+          <p class="eyebrow">1791</p>
+          <h1>The Bill Of Rights</h1>
+          <p class="dek">The first ten amendments protect core liberties, limit government power, and help define what constitutional freedom means in daily life.</p>
+        </div>
+        <span class="mast-qr"><img src="FruitHeightsAmerica250-QR.png" alt="QR code">Full site and quiz</span>
+      </header>
+
+      <main class="main-grid">
+        <aside class="stack">
+          <section class="panel red">
+            <h3>Document Summary</h3>
+            <p>Added the first ten amendments, protecting core liberties and limiting government power.</p>
+            <span class="tag">Benefit today: protected freedoms</span>
+          </section>
+        </aside>
+
+        <section class="stack">
+          <section class="panel gold">
+            <div class="section-title"><h2>The First Ten Amendments</h2></div>
+            <div class="rights-list">
+              <article class="right"><img src="assets/generated/rights/right-01.jpg" alt="First Amendment illustration"><div><strong>1st Amendment</strong><p>Speech, religion, press, peaceful assembly, and petition.</p></div></article>
+              <article class="right"><img src="assets/generated/rights/right-02.jpg" alt="Second Amendment illustration"><div><strong>2nd Amendment</strong><p>The right to keep and bear arms, represented with a constitutional shield.</p></div></article>
+              <article class="right"><img src="assets/generated/rights/right-03.jpg" alt="Third Amendment illustration"><div><strong>3rd Amendment</strong><p>No forced quartering of soldiers in homes in peacetime.</p></div></article>
+              <article class="right"><img src="assets/generated/rights/right-04.jpg" alt="Fourth Amendment illustration"><div><strong>4th Amendment</strong><p>Protection against unreasonable searches and seizures.</p></div></article>
+              <article class="right"><img src="assets/generated/rights/right-05.jpg" alt="Fifth Amendment illustration"><div><strong>5th Amendment</strong><p>Due process, grand jury rights, and protection from self-incrimination.</p></div></article>
+              <article class="right"><img src="assets/generated/rights/right-06.jpg" alt="Sixth Amendment illustration"><div><strong>6th Amendment</strong><p>Fair criminal trials, including a lawyer and an impartial jury.</p></div></article>
+              <article class="right"><img src="assets/generated/rights/right-07.jpg" alt="Seventh Amendment illustration"><div><strong>7th Amendment</strong><p>Jury trials in many civil cases.</p></div></article>
+              <article class="right"><img src="assets/generated/rights/right-08.jpg" alt="Eighth Amendment illustration"><div><strong>8th Amendment</strong><p>No excessive bail, excessive fines, or cruel and unusual punishment.</p></div></article>
+              <article class="right"><img src="assets/generated/rights/right-09.jpg" alt="Ninth Amendment illustration"><div><strong>9th Amendment</strong><p>People have other rights beyond those listed.</p></div></article>
+              <article class="right"><img src="assets/generated/rights/right-10.jpg" alt="Tenth Amendment illustration"><div><strong>10th Amendment</strong><p>Powers not given to the federal government are reserved to states or the people.</p></div></article>
+            </div>
+          </section>
+
+          <section class="panel blue">
+            <div class="section-title"><h2>Everyday Benefits</h2></div>
+            <div class="benefit-grid">
+              <div class="benefit"><strong>Free expression</strong><p>Speak, publish, worship, gather, and petition peacefully.</p></div>
+              <div class="benefit"><strong>Fair trials</strong><p>Government must follow rules before taking liberty or property.</p></div>
+              <div class="benefit"><strong>Limited government</strong><p>Power is checked and bound by a written Constitution.</p></div>
+            </div>
+          </section>
+
+          <section class="panel green">
+            <div class="figure-grid">
+              <article class="figure"><img src="assets/generated/heroes/james-madison.jpg" alt="James Madison"><div><strong>James Madison</strong><p>A key figure behind the Bill of Rights.</p></div></article>
+              <article class="figure"><img src="assets/generated/heroes/george-mason.jpg" alt="George Mason"><div><strong>George Mason</strong><p>His rights concerns helped build momentum for explicit protections.</p></div></article>
+              <article class="figure"><img src="assets/generated/benefits/fair-trials.jpg" alt="Fair trials illustration"><div><strong>Rule Of Law</strong><p>Rights and process place legal limits on public power.</p></div></article>
+            </div>
+          </section>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Companion for the Fruit Heights America 250 founding documents website.</span>
+      </footer>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="content">
+      <header class="mast">
+        <div>
+          <p class="eyebrow">Quiz Master Sheet</p>
+          <h1>Founding Documents Quiz</h1>
+          <p class="dek">Use these questions to quiz visitors on the information shown on the display sheets. The answer is printed directly below each question.</p>
+        </div>
+        <span class="mast-qr"><img src="FruitHeightsAmerica250-QR.png" alt="QR code">Interactive quiz</span>
+      </header>
+
+      <main class="stack">
+        <section class="panel gold">
+          <div class="section-title"><h2>Questions And Answers</h2></div>
+          <div class="quiz-list">
+            <article class="quiz-item">
+              <strong>1. Which three documents are called the Charters of Freedom?</strong>
+              <div class="quiz-options-print">Choices: Declaration, Constitution, and Bill of Rights; Declaration, Articles of Confederation, and Constitution; Constitution, Federalist Papers, and Bill of Rights.</div>
+              <p>Answer: Declaration, Constitution, and Bill of Rights.</p>
+            </article>
+            <article class="quiz-item">
+              <strong>2. Which document announced independence from Great Britain?</strong>
+              <div class="quiz-options-print">Choices: The Constitution; The Declaration of Independence; The Bill of Rights.</div>
+              <p>Answer: The Declaration of Independence.</p>
+            </article>
+            <article class="quiz-item">
+              <strong>3. Which document is described as a written framework or rulebook for government?</strong>
+              <div class="quiz-options-print">Choices: The Declaration of Independence; The Bill of Rights; The Constitution.</div>
+              <p>Answer: The Constitution.</p>
+            </article>
+            <article class="quiz-item">
+              <strong>4. What is the Bill of Rights?</strong>
+              <div class="quiz-options-print">Choices: The first ten amendments; Article V of the Constitution; The first draft of the Declaration.</div>
+              <p>Answer: The first ten amendments.</p>
+            </article>
+            <article class="quiz-item">
+              <strong>5. Which Preamble phrase says the people are the source of the Constitution's authority?</strong>
+              <div class="quiz-options-print">Choices: Establish Justice; We the People; Secure the Blessings of Liberty.</div>
+              <p>Answer: We the People.</p>
+            </article>
+            <article class="quiz-item">
+              <strong>6. Which First Amendment benefit is highlighted in the benefits section?</strong>
+              <div class="quiz-options-print">Choices: Fair trials; Free expression; Equal protection.</div>
+              <p>Answer: Free expression.</p>
+            </article>
+            <article class="quiz-item">
+              <strong>7. What does Article V provide?</strong>
+              <div class="quiz-options-print">Choices: A peaceful process for amendment; The list of protected freedoms in the First Amendment; The opening words of the Preamble.</div>
+              <p>Answer: A peaceful process for amendment.</p>
+            </article>
+            <article class="quiz-item">
+              <strong>8. Which amendment abolished slavery?</strong>
+              <div class="quiz-options-print">Choices: 14th Amendment; 13th Amendment; 15th Amendment.</div>
+              <p>Answer: 13th Amendment.</p>
+            </article>
+            <article class="quiz-item">
+              <strong>9. Which amendment protected women's right to vote?</strong>
+              <div class="quiz-options-print">Choices: 19th Amendment; 24th Amendment; 26th Amendment.</div>
+              <p>Answer: 19th Amendment.</p>
+            </article>
+            <article class="quiz-item">
+              <strong>10. Which amendment lowered the voting age to 18?</strong>
+              <div class="quiz-options-print">Choices: 24th Amendment; 15th Amendment; 26th Amendment.</div>
+              <p>Answer: 26th Amendment.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel blue">
+          <h3>Presenter Note</h3>
+          <p>All ten answers are covered by the printed sheets: page 1 covers the Charters of Freedom and civic benefits, page 2 covers the Declaration, page 3 covers the Constitution, Preamble, Article V, and later amendments, and page 4 covers the Bill of Rights.</p>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Companion for the Fruit Heights America 250 founding documents website.</span>
+      </footer>
+    </div>
+  </section>
+</body>
+</html>

@@ -106,53 +106,53 @@ heroes.forEach(([name, title, connection, today, image, source]) => {
 
 const questions = [
   {
-    prompt: "Which three documents are called the Charters of Freedom on this page?",
-    options: ["Declaration, Constitution, and Bill of Rights", "Magna Carta, Mayflower Compact, and Northwest Ordinance", "Federalist Papers, Articles, and Gettysburg Address"],
+    prompt: "Which three documents are called the Charters of Freedom?",
+    options: ["Declaration, Articles of Confederation, and Constitution", "Declaration, Constitution, and Bill of Rights", "Constitution, Federalist Papers, and Bill of Rights"],
     answer: "Declaration, Constitution, and Bill of Rights"
   },
   {
     prompt: "Which document announced independence from Great Britain?",
-    options: ["The Declaration of Independence", "The Bill of Rights", "The Constitution"],
+    options: ["The Constitution", "The Declaration of Independence", "The Bill of Rights"],
     answer: "The Declaration of Independence"
   },
   {
     prompt: "Which document is described as a written framework or rulebook for government?",
-    options: ["The Constitution", "The Declaration of Independence", "The 19th Amendment"],
+    options: ["The Declaration of Independence", "The Bill of Rights", "The Constitution"],
     answer: "The Constitution"
   },
   {
     prompt: "What is the Bill of Rights?",
-    options: ["The first ten amendments", "The first ten presidents", "The first ten states"],
+    options: ["The first ten amendments", "Article V of the Constitution", "The first draft of the Declaration"],
     answer: "The first ten amendments"
   },
   {
     prompt: "Which Preamble phrase says the people are the source of the Constitution’s authority?",
-    options: ["We the People", "Provide for the common defence", "Establish Justice"],
+    options: ["Establish Justice", "We the People", "Secure the Blessings of Liberty"],
     answer: "We the People"
   },
   {
     prompt: "Which First Amendment benefit is highlighted in the benefits section?",
-    options: ["Free expression", "Forced quartering", "Poll taxes"],
+    options: ["Fair trials", "Free expression", "Equal protection"],
     answer: "Free expression"
   },
   {
     prompt: "What does Article V provide?",
-    options: ["A peaceful process for amendment", "A list of presidents", "A rule canceling elections"],
+    options: ["A peaceful process for amendment", "The list of protected freedoms in the First Amendment", "The opening words of the Preamble"],
     answer: "A peaceful process for amendment"
   },
   {
     prompt: "Which amendment abolished slavery?",
-    options: ["13th Amendment", "19th Amendment", "26th Amendment"],
+    options: ["14th Amendment", "13th Amendment", "15th Amendment"],
     answer: "13th Amendment"
   },
   {
     prompt: "Which amendment protected women’s right to vote?",
-    options: ["19th Amendment", "5th Amendment", "8th Amendment"],
+    options: ["19th Amendment", "24th Amendment", "26th Amendment"],
     answer: "19th Amendment"
   },
   {
     prompt: "Which amendment lowered the voting age to 18?",
-    options: ["26th Amendment", "24th Amendment", "14th Amendment"],
+    options: ["24th Amendment", "15th Amendment", "26th Amendment"],
     answer: "26th Amendment"
   }
 ];
